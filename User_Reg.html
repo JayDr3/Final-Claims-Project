@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>User Login</title>
+    <link rel="stylesheet" href="UR_JS.css">
+</head>
+<body>
+    <fieldset>
+        <legend><h3><b>User Creation:</b></h3></legend>
+        <form action="insert.php" method="POST" class="container">
+            <label for="fname">First Name:</label>
+            <input type="text" name="fname" id="fname" required>
+            <label for="minit">MI:</label>
+            <input type="text" name="minit" id="minit" maxlength="1" required>
+            <label for="lname">Last Name:</label>
+            <input type="text" name="lname" id="lname" required><br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required><br>
+            <label for="gender">Gender:</label>
+            <input type="radio" name="gender" value="m" required>Male
+            <input type="radio" name="gender" value="f" required>Female<br>
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required> <br>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" 
+            title="Must contain a number, one uppercase letter and one lowercase letter. At least 6 or more characters. " 
+            required><br>
+            <label for="vpassword">Verify Password:</label>
+            <input type="password" name="vpassword" id="vpassword" required><br>
+            <button type="submit" name="sbutton" id="sbutton" onclick="return verify()"><b>Submit</b></button> <br>
+        </form>
+        <div id="pswreq">
+            <h4>Password must contain the following:</h4>
+            <p id="lower" class="invalid"><b>One lowercase letter</b></p>
+            <p id="upper" class="invalid"><b>One uppercase letter</b></p>
+            <p id="number" class="invalid"><b>A number</b></p>
+            <p id="length" class="invalid"><b>Minimum of 6 characters</b></p>
+        </div>
+    </fieldset>
+    <script type="text/javascript" src="UR_JS.js"></script>
+</body>
+</html>
