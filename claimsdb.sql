@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 11, 2018 at 08:46 PM
+-- Generation Time: Dec 14, 2018 at 12:56 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.2.12
 
@@ -167,7 +167,7 @@ CREATE TABLE `pma__recent` (
 --
 
 INSERT INTO `pma__recent` (`username`, `tables`) VALUES
-('root', '[{\"db\":\"socka\",\"table\":\"players\"}]');
+('root', '[{\"db\":\"socka\",\"table\":\"claims\"},{\"db\":\"socka\",\"table\":\"players\"},{\"db\":\"claims\",\"table\":\"claims_system\"}]');
 
 -- --------------------------------------------------------
 
@@ -274,7 +274,7 @@ CREATE TABLE `pma__userconfig` (
 --
 
 INSERT INTO `pma__userconfig` (`username`, `timevalue`, `config_data`) VALUES
-('root', '2018-12-11 19:45:24', '{\"Console\\/Mode\":\"collapse\"}');
+('root', '2018-12-13 23:55:42', '{\"Console\\/Mode\":\"collapse\"}');
 
 -- --------------------------------------------------------
 
@@ -471,10 +471,10 @@ USE `socka`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `players`
+-- Table structure for table `claims`
 --
 
-CREATE TABLE `players` (
+CREATE TABLE `claims` (
   `id` int(5) NOT NULL,
   `ssn` int(9) NOT NULL,
   `first_name` varchar(255) NOT NULL,
@@ -486,12 +486,12 @@ CREATE TABLE `players` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `players`
+-- Dumping data for table `claims`
 --
 
-INSERT INTO `players` (`id`, `ssn`, `first_name`, `middle_init`, `last_name`, `gender`, `number`, `user_name`) VALUES
+INSERT INTO `claims` (`id`, `ssn`, `first_name`, `middle_init`, `last_name`, `gender`, `number`, `user_name`) VALUES
 (2, 987566432, 'mandy', '', 'grace', 'F', '3189497878', 'mgrace1'),
-(3, 786775544, 'bob', 'j', 'dill', 'M', '6754563421', 'bdill1'),
+(3, 123098765, 'bob', 'f', 'dill', 'M', '6754563421', 'bdill1'),
 (4, 567332211, 'joel', 'h', 'val', 'M', '2147483647', 'jhval1');
 
 --
@@ -499,9 +499,9 @@ INSERT INTO `players` (`id`, `ssn`, `first_name`, `middle_init`, `last_name`, `g
 --
 
 --
--- Indexes for table `players`
+-- Indexes for table `claims`
 --
-ALTER TABLE `players`
+ALTER TABLE `claims`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -509,9 +509,9 @@ ALTER TABLE `players`
 --
 
 --
--- AUTO_INCREMENT for table `players`
+-- AUTO_INCREMENT for table `claims`
 --
-ALTER TABLE `players`
+ALTER TABLE `claims`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
