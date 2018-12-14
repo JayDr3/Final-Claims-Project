@@ -1,7 +1,7 @@
 # Final-Claims-Project
 This is the final project for the claims system. By: Teamabc-123
 ********************************************************************************************************************************
-This, with screenshots, can be found in the UserDocumentation_Teamabc-123.docx file.
+THIS, WITH SCREENSHOTS, CAN BE FOUND IN THE UserDocumentation_Teamabc-123.docx FILE.
 ********************************************************************************************************************************
 
 How-To: Installing, Deploying and using Teamabc-123’s Claim System
